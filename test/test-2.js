@@ -29,7 +29,7 @@ describe('DOM Leak 2', function () {
 
   it('should be defined', function () {
     var instance = React.render(
-      <Leaker isVisible={false}></Leaker>,
+      <Leaker></Leaker>,
       document.body
     );
 
