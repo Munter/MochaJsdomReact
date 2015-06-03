@@ -7,11 +7,11 @@ In this repository you find 3 identical tests.
  - Each test created a new jsdom environment, which it leaks to the global scope (needed by React)
  - Each test destroys the globally leaked jsdom window when it's done
 
- The first test runs fine.
+The first test runs fine.
 
- The second test fails with `DOMException: Wrong document`, an error from Jsdom caused by something trying to append a DOM-node from a different document.
+The second test fails with `DOMException: Wrong document`, an error from Jsdom caused by something trying to append a DOM-node from a different document.
 
- The third test fails with `Error: Invariant Violation: findComponentRoot(..., .1): Unable to find element. This probably means the DOM was unexpectedly mutated (e.g., by the browser), usually due to forgetting a <tbody> when using tables, nesting tags like <form>, <p>, or <a>, or using non-SVG elements in an <svg> parent. Try inspecting the child nodes of the element with React ID ''.`
+The third test fails with `Error: Invariant Violation: findComponentRoot(..., .1): Unable to find element. This probably means the DOM was unexpectedly mutated (e.g., by the browser), usually due to forgetting a <tbody> when using tables, nesting tags like <form>, <p>, or <a>, or using non-SVG elements in an <svg> parent. Try inspecting the child nodes of the element with React ID ''.`
 
 If you delete the line that says `When this HTML innerText is here, the tests fail` from the first failing test, it passes and the errors are happening at the next test. Similar if you comment out the `instance.setState()`-call.
 
