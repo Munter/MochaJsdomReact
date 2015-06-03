@@ -1,0 +1,19 @@
+{
+  "name": "MochaJsdomReact",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel": "^5.4.7",
+    "babel-runtime": "^5.4.7",
+    "jsdomify": "^0.2.1",
+    "mocha": "^2.2.5",
+    "mocha-babel": "^3.0.0",
+    "react": "^0.13.3"
+  }
+}
